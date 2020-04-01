@@ -8,6 +8,7 @@ from sklearn.linear_model import LogisticRegression
 from mlflow import log_metric, log_param
 from mlflow.sklearn import log_model
 import mlflow
+import os
 
 url= "https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/639388c2cbc2120a14dcf466e85730eb8be498bb/iris.csv"
 df = pd.read_csv(url)
@@ -24,11 +25,13 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.33, random
 
 MAX_ITER = 2
 
+REMOTE_MLFLOW_SERVER = os.environ['REMOTE_TRACKING_SERVER']
+mlflow.set_tracking_uri(REMOTE_MLFLOW_SERVER)
+
 try:
     mlflow.create_experiment("iris_lr")
 except:
     print('The experiment may already exist.')
-
 
 mlflow.set_experiment("iris_lr")
 
