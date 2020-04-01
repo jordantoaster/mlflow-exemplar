@@ -48,9 +48,12 @@ Value locally seems limited, it writes data to a local directory, which then wou
 need to run mlflow flow ui in same directory as mlruns data directory.
 Its use seems most clear in high iteration environments, in which you have a period of > 1 week to have several experiments.
 
-Theory that commit has is not updating when running experiment in a notebook.
+Theory that commit has is not updating when running experiment in a notebook - verified!
 
 Have commit has I can document to go back to in an experiment run, to run an old version of the modelling code.
+
+old commit hash - c7a8077516ae0f89eabae1f590a711fbbd1e8361
+new commit has has 2 iterations on lr.
 
 ## Resources
 

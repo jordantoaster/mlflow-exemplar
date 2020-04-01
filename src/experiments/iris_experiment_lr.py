@@ -22,7 +22,7 @@ x = df[['sepal_length']]
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.33, random_state=2)
 
 
-MAX_ITER = 100
+MAX_ITER = 2
 
 try:
     mlflow.create_experiment("iris_lr")
