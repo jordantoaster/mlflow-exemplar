@@ -40,8 +40,6 @@ Can I setup a log reg experiment and also a nn experiment?
 
 use something like the iris data, pull from external source to keep it simple.
 
-## TODO / Questions
-
 Do logged artefacts persist when server down?
 how does ml flow relates to code version history? e.g in a notebook?
 does mlflow make sense in non notebook development? ie... retraining or is it sandbox only? a sandbox tool?
@@ -76,10 +74,8 @@ I then update the tracking URI programmatically in code.
 works connecting to the bucket and ec2 instance.
 I setup up credentials in the ec2 via aws configure, it may need this to pull assets from s3 in the server.
 I pip installed boto3 as well.
+I have set tracking uri as an env variable to be sourced, readme will make it obvious how to find this value.
 
-Can you set a tracking URI to a one drive folder?
-
-mlflow run iris_experiment_lr.py -e reproduce -P run_uuid=8f69ab8635db4cef9380c3c8b39fd66b
 
 
 ## Todo
