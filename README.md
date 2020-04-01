@@ -54,6 +54,10 @@ Have commit has I can document to go back to in an experiment run, to run an old
 
 old commit hash - c7a8077516ae0f89eabae1f590a711fbbd1e8361
 new commit has has 2 iterations on lr.
+new commit has a3d6238eb739ac970396daa5879c5dd9c7d33f6e
+to get a new hash you need to make a commit.
+
+git revert c7a8077516ae0f89eabae1f590a711fbbd1e8361
 
 ## Resources
 
