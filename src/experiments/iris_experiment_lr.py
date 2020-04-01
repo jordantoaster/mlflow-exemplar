@@ -24,11 +24,12 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.33, random
 
 MAX_ITER = 2
 
+mlflow.set_tracking_uri("http://52.56.126.161:5000/")
+
 try:
     mlflow.create_experiment("iris_lr")
 except:
     print('The experiment may already exist.')
-
 
 mlflow.set_experiment("iris_lr")
 

@@ -16,6 +16,11 @@ Through simulating a real-world-like scenario we can tease out the value of ML f
 
 - If the team change a python file in an experiment, viewing an older version of the source file with the experiment run should be possible, as well as running either version.
 
+## Setup.
+
+
+### Setup Remote Tracking Server.
+
 
 ## Dev Notes
 
@@ -58,6 +63,31 @@ new commit has a3d6238eb739ac970396daa5879c5dd9c7d33f6e
 to get a new hash you need to make a commit.
 
 git revert c7a8077516ae0f89eabae1f590a711fbbd1e8361
+
+ec2
+server setup to my own ip
+ssh in with key
+installed mlflow
+create s3 bucket
+start server
+mlflow server --default-artifact-root s3://mlflow-exemplar/ --host 0.0.0.0
+I set a custom inbound TCP rule to open port 5000 (mlflow default
+I then update the tracking URI programmatically in code.
+works connecting to the bucket and ec2 instance.
+I setup up credentials in the ec2 via aws configure, it may need this to pull assets from s3 in the server.
+I pip installed boto3 as well.
+
+Can you set a tracking URI to a one drive folder?
+
+mlflow run iris_experiment_lr.py -e reproduce -P run_uuid=8f69ab8635db4cef9380c3c8b39fd66b
+
+
+## Todo
+
+- Tracking Server for collaboration, stop commiting run assets to Git and persistence.
+
+- What if you use DVC to obscure the 'ml-runs' then you can possibly persist that data globally, merging and collaboration could be a challenge if their is an asset delta.
+
 
 ## Resources
 
