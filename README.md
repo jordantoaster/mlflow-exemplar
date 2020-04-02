@@ -39,6 +39,8 @@ Note: The project is setup to assume the use of a remote tracking server, removi
 
 4. Run ``source env/bin/activate`` to start the virtual environment.
 
+NOTE: The steps below will not work 'out of the box' as this reference assumes that a tracking server is the goal, you can delete the ``mlflow.set_tracking...()`` LOC in each file to run locally if you desire.
+
 5. Run ``python src/experiments/iris_experiment_rf.py`` to start an experiment. This will create a local ``mlruns`` folder which collects the data collected from the experiment. You can run a similar command for the other experiment as well to gain metrics.
 
 6. Run in project root ``mlflow ui`` to spin up a local webapp which shows the data collected from your various experiment runs
