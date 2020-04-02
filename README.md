@@ -66,7 +66,7 @@ NOTE: The steps below will not work 'out of the box' as this reference assumes t
 
         3.2.4 Start your instance in the EC2 GUI (dont forget to stop it when your not using the server)
 
-4. You now need to ssh into your EC2 instance, to do this, ensure you are in the same directory as your public key and run in a terminal ``ssh -i "<PUBLIC_KEY_PEM_FILE_NAME>" ec2-user@e<DNS_NAME>`` which will put your into the default directory for the server.
+4. You now need to ssh into your EC2 instance, to do this, ensure you are in the same directory as your public key and run in a terminal ``ssh -i "<PUBLIC_KEY_PEM_FILE_NAME>.pem" ec2-user@<DNS_NAME>`` which will put your into the default directory for the server.
 
 5. Within the server terminal run ``sudo pip install mlflow`` ``sudo pip install boto3``
 
